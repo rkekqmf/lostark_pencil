@@ -1,4 +1,4 @@
-.App {
+.App1 {
   text-align: center;
 }
 
@@ -35,4 +35,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App2 {
+  display: flex;
+  justify-content: center;
+}
+
+.App3 {
+  width: 300px;
 }
