@@ -16,7 +16,7 @@ function App() {
       },
     })
       .then((response) => response.json())
-      .then((data) => setUsers(data));
+      .then((data) => console.log(data));
   }, []);
   console.log(users);
   return (
