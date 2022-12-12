@@ -16,27 +16,26 @@ function App() {
       },
     })
       .then((response) => response.json())
-      .then((data) => setUsers((users) => [...users, data]));
+      .then((data) => setUsers(data));
   }, []);
   console.log(users);
   return (
     <div className="App1">
       <h1>필연 단체 군장검사x</h1>
-
-      {users.map((user) => {
-        return (
-          <div className="App2">
-            <img className="App3" src={user?.CharacterImage} alt="" />
-            <div>
-              <p>{user?.GuildMemberGrade}</p>
-              <p>{user?.CharacterClassName}</p>
-              <p>{user?.Title}</p>
-              <p>{user?.CharacterName}</p>
-              <p>{user?.ItemMaxLevel}</p>
-            </div>
-          </div>
-        );
-      })}
+      {/* {users.map((user) => { */}
+      return (
+      <div className="App2">
+        <img className="App3" src={users?.CharacterImage} alt="" />
+        <div>
+          <p>{users?.GuildMemberGrade}</p>
+          <p>{users?.CharacterClassName}</p>
+          <p>{users?.Title}</p>
+          <p>{users?.CharacterName}</p>
+          <p>{users?.ItemMaxLevel}</p>
+        </div>
+      </div>
+      );
+      {/* })} */}
     </div>
   );
 }
