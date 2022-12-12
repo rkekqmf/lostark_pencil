@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     for (let i = 0; i < data.length; i++) {
       fetch(`https://developer-lostark.game.onstove.com/armories/characters/${data[i]}/profiles`, {
-        "Access-Control-Allow-Origin": "https://developer-lostark.game.onstove.com",
+        "Access-Control-Allow-Origin": "https://lostark-pencil.vercel.app",
         method: "get",
         headers: {
           "Content-Type": "application/json",
