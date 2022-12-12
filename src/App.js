@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     for (let i = 0; i < data.length; i++) {
-      fetch(`/armories/characters/${data[i]}/profiles`, {
+      fetch(`https://developer-lostark.game.onstove.com/armories/characters/${data[i]}/profiles`, {
         method: "get",
         headers: {
           "Content-Type": "application/json",
