@@ -37,7 +37,7 @@ function App() {
         responseType: "json", // default
       }).then(function (response) {
         setUsers((users) => [...users, response.data]);
-        console.log("성공");
+        console.log(users);
       });
     }
   }, []);
