@@ -1,5 +1,9 @@
 .App1 {
   text-align: center;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: 500px 500px 500px;
+  justify-content: center;
 }
 
 .App-logo {
@@ -39,7 +43,6 @@
 
 .App2 {
   display: flex;
-  justify-content: center;
 }
 
 .App3 {

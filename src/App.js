@@ -56,8 +56,6 @@ function App() {
   // console.log(xmlHttpRequest);
   return (
     <div className="App1">
-      <h1>필연 단체 군장검사x</h1>
-
       {users?.map((user) => {
         return (
           <div className="App2">

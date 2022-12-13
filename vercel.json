@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/developer-lostark.game.onstove.com/:path*",
+      "destination": "https://developer-lostark.game.onstove.com/:path*"
+    },
+    {
+      "source": "/developer-lostark.game.onstove.com/:path*/",
+      "destination": "https://developer-lostark.game.onstove.com/:path*/"
+    }
+  ]
+}
