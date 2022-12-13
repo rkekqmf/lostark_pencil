@@ -25,6 +25,7 @@ function App() {
   useEffect(() => {
     for (let i = 0; i < data.length; i++) {
       axios({
+        withCredentials: false,
         method: "get",
         url: `https://developer-lostark.game.onstove.com/armories/characters/${data[i]}/profiles`,
         headers: {
