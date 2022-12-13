@@ -26,7 +26,7 @@ function App() {
     for (let i = 0; i < data.length; i++) {
       axios({
         method: "get",
-        url: `${process.env.REACT_APP_DB_HOST}/armories/characters/${data[i]}/profiles`,
+        url: `https://developer-lostark.game.onstove.com/armories/characters/${data[i]}/profiles`,
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
