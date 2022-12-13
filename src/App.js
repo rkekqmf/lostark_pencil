@@ -25,14 +25,13 @@ function App() {
   useEffect(() => {
     for (let i = 0; i < data.length; i++) {
       axios({
-        method: "get", // 통신 방식
+        method: "get",
         url: `${process.env.REACT_APP_DB_HOST}/armories/characters/${data[i]}/profiles`,
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
           authorization: `bearer ${process.env.REACT_APP_API_KEY}`,
-        }, // 요청 헤더 설정
-        responseType: "json", // default
+        },
       }).then(function (response) {
         setUsers((users) => [...users, response.data]);
         console.log(response.data);
