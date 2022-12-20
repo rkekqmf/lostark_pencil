@@ -48,6 +48,7 @@ function App() {
   }
   return (
     <div className="App1">
+      <p>닉네임 입력</p>
       <input onChange={getUserName} type="text" value={userName} />
       <button onClick={handleUserInfo}>검색</button>
       {info && <Test profile={profile} collection={collection} />}
