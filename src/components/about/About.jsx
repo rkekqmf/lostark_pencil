@@ -1,6 +1,6 @@
-import "./Test.css";
+import React from "react";
 
-const Test = ({ profile, collection }) => {
+const About = ({ user, profile, collection }) => {
   console.log(profile[0]);
   console.log(collection[0]);
   return (
@@ -13,7 +13,7 @@ const Test = ({ profile, collection }) => {
           <p>{profile[0]?.CharacterName}</p>
           <p>{profile[0]?.ExpeditionLevel}</p>
           <p>{profile[0]?.GuildName}</p>
-          <p>{profile[0]?.ItemAvgLevel}</p>
+          <p>{profile[0]?.ItemMaxLevel}</p>
           <p>{profile[0]?.PvpGradeName}</p>
           <p>{profile[0]?.ServerName}</p>
           <p>{profile[0]?.Title}</p>
@@ -34,15 +34,27 @@ const Test = ({ profile, collection }) => {
           );
         })}
       </div>
+      <div className="App5">
+        {user[0]?.map((u) => {
+          let a = 0;
+          return (
+            <div className="App5">
+              <div>{u.CharacterName}</div>
+              <div>
+                {Number(u.ItemMaxLevel.replace(",", "")) < 1325
+                  ? "0골드"
+                  : Number(u.ItemMaxLevel.replace(",", "")) > 1455
+                  ? a + 1300
+                  : Number(u.ItemMaxLevel.replace(",", "")) > 1455
+                  ? a + 2000
+                  : ""}
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
 
-// Stats
-// :
-// (8) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
-// Tendencies
-// :
-// (4) [{…}, {…}, {…}, {…}]
-
-export default Test;
+export default About;
